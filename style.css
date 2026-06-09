@@ -439,27 +439,30 @@ hr{
 .imgg{
     height: 350px !important;
 }
+.text h2{
+    font-size: 14px !important;
+}
 .text{
     width: 50%;
-    font-size: 12px !important;
+    font-size: 10px !important;
     color: var(--whiteColor);
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     position: relative;
     left: 5%;
-    top: -40%;
+    top: -50%;
     padding: 2%;
 }
 .text .btn{
     width: 50%;
-    font-size: 10px;
+    font-size: 10px !important;
 }
 /* Order */
 .back{
     width: 100%;
     flex-direction: column;
-    margin-top: -60%;
+    margin-top: -20%;
 }
 .order{
     width: 90%;
@@ -474,12 +477,12 @@ hr{
     right: 20px;
 }
 .otext{
-    font-size: 10px;
+    font-size: 10px !important;
     text-align: center;
     right: 20px;
 }
 .of{
-    font-size: 30px;
+    font-size: 30px !important;
 }
 /* Menu */
 .items{
