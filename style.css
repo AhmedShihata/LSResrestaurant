@@ -89,7 +89,7 @@ img{
     justify-content: center;
     position: relative;
     left: 1%;
-    top: -40%;
+    top: -30%;
     padding: 2%;
 }
 .text .btn{
@@ -101,7 +101,7 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 10%;
+    margin-top: -20%;
 }
 .order{
     background-color: var(--blackColor);
