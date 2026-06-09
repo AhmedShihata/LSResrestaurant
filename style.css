@@ -26,12 +26,11 @@ img{
     margin: 10%;
 }
 
-.navbar-container{
+.navbar .container{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-
 }
 
 .custom-link {
@@ -102,7 +101,7 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .order{
     background-color: var(--blackColor);
@@ -216,7 +215,7 @@ img{
     width: 40%;
     height: 40%;
     position: relative;
-    left: 20%;
+    left: 30%;
     top: 30%;
 }
 h5{
@@ -434,13 +433,11 @@ hr{
 
 /* 320px - Extra Small Mobile */
 @media screen and (min-width: 320px) and (max-width: 479px) {
-    /* Nav */
-.navbar{
-    width:100%;
+.custom-link,.navbar-brand {
+   font-size: 13px !important;
 }
 .imgg{
-    width: 100%;
-    height: 100vh;
+    height: 350px !important;
 }
 .text{
     width: 50%;
@@ -451,7 +448,7 @@ hr{
     justify-content: center;
     position: relative;
     left: 5%;
-    top: -70%;
+    top: -40%;
     padding: 2%;
 }
 .text .btn{
@@ -462,7 +459,7 @@ hr{
 .back{
     width: 100%;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: -60%;
 }
 .order{
     width: 90%;
@@ -553,7 +550,7 @@ button{
 }
 /* About */
 .about{
-    height: 200px;
+    height: 300px;
 }
 .imggg{
     width: 40%;
@@ -611,7 +608,7 @@ iframe {
 }
 /* Clients */
 .ntext{
-    margin-top: 60%;
+    margin-top: 50%;
     width: 100%;
 }
 .ntext h2{
@@ -621,7 +618,7 @@ iframe {
 .conp{
     margin: 2% 0;
     display: grid;
-            grid-template-columns: repeat(1,250px);
+            grid-template-columns: repeat(1,300px);
             grid-template-rows: repeat(2,250px);
             grid-template-areas: "con1 "
                                  "con2";
@@ -930,10 +927,11 @@ hr{
 }
 
 /* 1024px+ - Desktop */
-@media screen and (min-width: 1026px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px) and (max-width: 1180px) {
     .navbar { padding: 0 5% !important; }
     nav #logo { font-size: 25px; }
     nav #link { font-size: 15px; }
+    .imgg {width: 100%;}
     .text { width: 40%; left: 1%; top: -70%; padding: 2%; }
     .text h2 { font-size: 28px; }
     .text p { font-size: 16px; }
@@ -952,14 +950,14 @@ hr{
     button{left: 100%; }
     .itext { font-size: 12px; padding: 4%; }
     .about { height: 500px; margin-top: 10%; padding: 1%; }
-    .imggg { width: 30%; left: 20%; padding: 1%;top: 10%;}
+    .imggg { width: 30%; left: 1%; padding: 1%;}
     .ttext { left: 50%; bottom: 50%; width: 40%; font-size: 10px !important; }
     .book { margin: 5% 0 0 10%; width: 70%; height: 450px; }
     .form { width: 50%; display: inline; }
     .btn1, .btn2 { width: 20%; left: 3%; }
     .map-wrapper { width: 60%; left: 60%; top: -70%; }
     iframe { width: 70%; height: 300px; }
-    .conp { margin: 5%; grid-template-columns: repeat(2, 550px); grid-template-rows: repeat(1, 300px); gap: 30px; }
+    .conp { justify-content: center; grid-template-columns: repeat(2, 490px); grid-template-rows: repeat(1, 300px); gap: 30px; }
 }
 
 
