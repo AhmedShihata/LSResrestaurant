@@ -437,7 +437,7 @@ hr{
    font-size: 13px !important;
 }
 .imgg{
-    height: 350px !important;
+    height: 400px !important;
 }
 .text h2{
     font-size: 14px !important;
@@ -451,7 +451,7 @@ hr{
     justify-content: center;
     position: relative;
     left: 5%;
-    top: -50%;
+    top: -40%;
     padding: 2%;
 }
 .text .btn{
@@ -462,7 +462,7 @@ hr{
 .back{
     width: 100%;
     flex-direction: column;
-    margin-top: -20%;
+    margin-top: -40%;
 }
 .order{
     width: 90%;
