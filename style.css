@@ -10,6 +10,7 @@
     --hoverColor:rgb(238, 220, 11);
     --blackColor:black;
     --blacklightColor:rgb(48, 48, 54);
+    --blacklightColor-a:rgba(69, 69, 73, 0.699);
     --whiteColor:white;
 }
 img{
@@ -17,8 +18,8 @@ img{
 }
 /* Nav */
 .navbar{
-    margin-bottom: 10%;
-    background-color: var(--blacklightColor)!important;
+    height: 10vh;
+    background-color: var(--blacklightColor-a)!important;
 }
 .custom-navbar{
     padding: 1% !important;
@@ -55,11 +56,13 @@ img{
 
 #logo:hover {
     color: var(--hoverColor) !important;
+    display: block;
 }
 
 /* Navbar Toggle Button Customization */
 .navbar-toggler {
     border: 2px solid var(--mainColor) !important;
+      background-color: #d0191900;
 }
 
 .navbar-toggler:focus {
@@ -69,7 +72,9 @@ img{
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28223, 193, 47, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
-
+.align-items-center{
+    padding: 5%;
+}
 /* Header */
 .header{
     width: 100%;
@@ -102,14 +107,14 @@ img{
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 10%;
+    padding-top: 10px;
 }
 .order{
     background-color: var(--blackColor);
     border-radius: 10px;
     width: 30%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    align-items: start;
     padding: 2%;
 }
 .oimgg{
@@ -117,13 +122,11 @@ img{
     background-size: cover;
     border: 5px solid var(--mainColor);
     border-radius: 50%;
-    align-items: start;
 }
 .otext{
     color: var(--whiteColor);
     font-size: 16px;
     text-align: center;
-    justify-content: center;
 }
 .of{
     font-size: 40px;
@@ -143,8 +146,8 @@ img{
 }
 /* Menu */
 .menu{
-    margin-top: 10%;
     width: 100%;
+    padding-top: 20px;
 }
 .mtex{
     font-weight: bold;
@@ -152,7 +155,7 @@ img{
     margin: 5% 1%;
 }
 .items{
-    justify-content: space-evenly;
+    margin: 0 10%;
     gap: 30px;
     justify-content: space-evenly;
     align-items: center;
@@ -212,11 +215,11 @@ img{
 }
 .iiimg{
     padding: 1%;
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 50%;
     position: relative;
-    left: 30%;
-    top: 30%;
+    left: 20%;
+    top: 20%;
 }
 h5{
     padding: 2% !important;
@@ -251,15 +254,14 @@ h5{
 .about{
     margin-top: 10%;
     background-color: var(--blacklightColor);
-    height: 650px;
-    text-align: center;
-    padding: 1%;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 10px;
 }
 .imggg{
-    width: 30%;
+    width: 20%;
     position: relative;
     left: 10%;
 }
@@ -267,18 +269,20 @@ h5{
     font-size: 14px !important;
     color: var(--whiteColor);
     width: 40%;
+    text-align: center;
 }
 /* Book Table */
 .book{
-    margin: 5% 0 0 10%;
-    width: 70%;
+    margin: 5% 0 0 5%;
+    width: 90%;
     height: 450px;
+    padding-top: 10px;
 }
 .ftext{
     padding: 5% 10%;
 }
 .form{
-    width: 50%;
+    width: 30%;
     display: inline;
 }
 .btn1{
@@ -299,9 +303,10 @@ h5{
 }
 /* خريطة  */
 .map-wrapper{
-    width: 60%;
+    margin: 0 5%;
+    width: 50%;
     position: relative;
-    left: 60%;
+    left: 50%;
     top: -70%;
     border-radius: 30px;
 }
@@ -316,13 +321,13 @@ iframe {
 .ntext{
     margin-top: 10%;
     width: 100%;
-
+    padding: 10px;
 }
 .ntext h2{
     text-align: center;
 }
 .conp{
-    margin: 5% 10% 0 10%;
+    margin: 5% 10%;
     display: grid;
             grid-template-columns: repeat(2,600px);
             grid-template-rows: repeat(1,290px);
@@ -371,14 +376,13 @@ iframe {
 .contit{
     background-color: var(--blacklightColor);
     width: 100%;
-    margin-top: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 .cont{
-    margin: 0 10%;
+    margin: 0 5%;
     width: 100%;
     padding: 2% 10%;
     display: flex;
@@ -427,17 +431,23 @@ hr{
     align-items: center;
 
 }
+
+
 /* ============================================ */
 /* RESPONSIVE DESIGN - جميع أحجام الشاشات */
 /* ============================================ */
 
-/* 320px - Extra Small Mobile */
-@media screen and (min-width: 320px) and (max-width: 479px) {
+
+/* 320px - Extra Small Mobile */ 
+@media screen and (min-width: 320px) and (max-width: 399px) {
 .custom-link,.navbar-brand {
    font-size: 13px !important;
 }
+.header{
+    height: 50vh;
+}
 .imgg{
-    height: 400px !important;
+    height: 400px ;
 }
 .text h2{
     font-size: 14px !important;
@@ -451,35 +461,35 @@ hr{
     justify-content: center;
     position: relative;
     left: 5%;
-    top: -30%;
+    top: -60%;
     padding: 2%;
 }
 .text .btn{
-    width: 50%;
+    width: 60%;
     font-size: 10px !important;
 }
 /* Order */
 .back{
     width: 100%;
     flex-direction: column;
-    margin-top: -50%;
+    margin-top: 10%;
 }
 .order{
     width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     padding: 5%;
     margin: 3% auto;
 }
 .oimgg{
     width: 70px;
-    position:relative;
-    right: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: start;
 }
 .otext{
     font-size: 10px !important;
     text-align: center;
-    right: 20px;
 }
 .of{
     font-size: 30px !important;
@@ -530,9 +540,8 @@ hr{
     grid-area: item9;
 }
 .iiimg{
-    padding: 1%;
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 50%;
 }
 h5{
     font-size: 15px !important;
@@ -547,8 +556,246 @@ h5{
     font-size: 10px;
     font-weight: bold;
 }
-button{
-    left: 90% ; 
+.ii button{
+    left: 100% ; 
+    font-size: 10px;   
+}
+/* About */
+.about{
+    height: 300px;
+}
+.imggg{
+    width: 40%;
+    left: 1%;
+}
+.ttext h2{
+    font-size: 12px !important;
+    width: 100%;
+}
+.ttext{
+    font-size: 10px !important;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    gap: 1px;
+}
+.tetext{
+    font-size: 8px !important;
+    overflow: auto;
+    height: 50px;
+}
+.ttext .btn{
+    width: 70%;
+    font-size: 10px !important;
+}
+/* Book Table */
+.book{
+    margin: 5%;
+    width: 80%;
+}
+.ftext{
+    padding: 2% 10%;
+    text-align: center;
+}
+.form-control{
+    width: 100% !important;
+    font-size: 10px !important;
+}
+.btn1 , .btn2{
+    width: 40%;
+    font-size: 12px !important;
+}
+/* خريطة  */
+.map-wrapper{
+    width: 90%;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 4% auto;
+}
+iframe {
+    width: 100%;
+    display: block;
+}
+/* Clients */
+.ntext{
+    margin-top: 50%;
+    width: 100%;
+}
+.ntext h2{
+    text-align: center;
+    font-size: 18px;
+}
+.conp{
+    margin: 2% 0;
+    display: grid;
+            grid-template-columns: repeat(1,300px);
+            grid-template-rows: repeat(2,250px);
+            grid-template-areas: "con1 "
+                                 "con2";
+    gap: 20px;
+    justify-content: center;
+}
+.con{
+    padding: 5%;
+}
+.nimg img{
+    width: 60px;    
+}
+.nimg h6{
+    font-size: 12px !important;    
+}
+.nimg p{
+    font-size: 8px !important;
+}
+.nnte{
+    font-size: 10px !important;
+}
+/* Footer */
+.contit{
+    width: 100%;
+}
+.cont{
+    margin: 1% 1%;
+    padding: 1% 0%;
+    font-size: 8px;
+    justify-content: space-around;
+}
+.contt h4{
+    padding: 1%;
+    font-size: 10px;       
+    font-size: 10px !important;
+}
+hr{
+    margin: 0 !important;
+}
+.copy{
+    font-size: 8px;
+    margin: 1%;
+}
+/* } */
+
+/* 400 - 479 */
+@media screen and (min-width: 401px) and (max-width: 479px) {
+.custom-link,.navbar-brand {
+   font-size: 13px !important;
+}
+.header{
+    height: 50vh;
+}
+.imgg{
+    height: 400px !important;
+}
+.text h2{
+    font-size: 14px !important;
+}
+.text{
+    width: 50%;
+    font-size: 10px !important;
+    color: var(--whiteColor);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+    left: 5%;
+    top: -60%;
+    padding: 2%;
+}
+.text .btn{
+    width: 50%;
+    font-size: 10px !important;
+}
+/* Order */
+.back{
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0%;
+}
+.order{
+    width: 90%;
+    align-items: center;
+    justify-content: start;
+    padding: 5%;
+    margin: 3% auto;
+}
+.oimgg{
+    width: 70px;
+    display: flex;
+    align-items: start;
+}
+.otext{
+    font-size: 10px !important;
+    text-align: center;
+}
+.of{
+    font-size: 25px !important;
+}
+/* Menu */
+.items{
+    gap: 30px;
+    margin: 5% 1%;
+    display: grid;
+            grid-template-columns: repeat(1,250px);
+            grid-template-rows: repeat(9,400px);
+            grid-template-areas: "item1 "
+                                 "item2 "
+                                 "item3 " 
+                                 "item4 "
+                                 "item5 "
+                                 "item6 "
+                                 "item7 "
+                                 "item8 "
+                                 "item9 ";
+    justify-content: center;
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
+.item5{
+    grid-area: item5;
+}
+.item6{
+    grid-area: item6;
+}
+.item7{
+    grid-area: item7;
+}
+.item8{
+    grid-area: item8;
+}
+.item9{
+    grid-area: item9;
+}
+.iiimg{
+    padding: 1%;
+    width: 60%;
+    height: 50%;
+}
+h5{
+    font-size: 15px !important;
+}
+.itext{
+    font-size: 10px;
+}
+.is{
+    position: relative;
+    right: 100%;
+    top: -20%;
+    font-size: 10px;
+    font-weight: bold;
+}
+.ii button{
+    left: 120% ; 
     font-size: 10px;   
 }
 /* About */
@@ -668,22 +915,21 @@ hr{
 }
 
 /* 480px - Small Mobile */
-@media screen and (min-width: 480px) and (max-width: 719px) {
+@media screen and (min-width: 480px) and (max-width: 600px) {
     .navbar { padding: 0 4% !important; }
     nav #logo { font-size: 16px; }
     nav #link { font-size: 12px; }
     .header { height: 55vh; }
     .imgg { height: 55vh; }
-    .text { width: 95%; left: 0; top: -52%; padding: 3%; }
+    .text { width: 60%; left: 0; top: -80%; padding: 3%; }
     .text h2 { font-size: 16px; }
     .text p { font-size: 12px; }
-    .text a { width: 60%; }
-    .back { flex-direction: column; margin-top: 12%; gap: 20px; padding: 0 2%; }
-    .order { width: 100%; flex-direction: column; padding: 3%; }
-    .oimgg { width: 100px; right: 0; }
-    .otext { right: 0; text-align: center; margin-top: 12px; }
+    .text a { width: 40% !important; font-size: 10px;}
+    .back { flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 2%; }
+    .order { width: 80%; flex-direction: row; padding: 3%; }
+    .oimgg { width: 100px; justify-content: left; align-items: center; }
+    .otext {justify-content: center; text-align: center; margin-top: 12px; }
     .of { font-size: 28px; }
-    .menu { margin-top: 15%; }
     .mtex { font-size: 18px;}
     .items { display: grid;
             grid-template-columns: repeat(1,350px);
@@ -804,22 +1050,159 @@ hr{
     margin: 1%;
 }
 }
+
+/* 601 - 720 */
+@media screen and (min-width: 601px) and (max-width: 720px) {
+    .navbar { padding: 0 4% !important; }
+    nav #logo { font-size: 16px; }
+    nav #link { font-size: 12px; }
+    .header { height: 55vh; }
+    .imgg { height: 55vh; }
+    .text { width: 60%; left: 0; top: -65%; padding: 3%; }
+    .text h2 { font-size: 16px; }
+    .text p { font-size: 12px; }
+    .text a { width: 40% !important; font-size: 10px;}
+    .back { flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 2%; }
+    .order { width: 80%; flex-direction: row; padding: 3%; }
+    .oimgg { width: 100px; justify-content: left; align-items: center; }
+    .otext {justify-content: center; text-align: center; margin-top: 12px; }
+    .of { font-size: 28px; }
+    .mtex { font-size: 18px;}
+    .items { display: grid;
+            grid-template-columns: repeat(1,350px);
+            grid-template-rows: repeat(9,450px);
+            grid-template-areas: "item1 "
+                                 "item2 "
+                                 "item3 " 
+                                 "item4 "
+                                 "item5 "
+                                 "item6 "
+                                 "item7 "
+                                 "item8 "
+                                 "item9 "; gap: 20px;}
+    h5 { font-size: 15px !important; }
+    .itext { font-size: 12px; }
+    .about { height: 50vh;}
+    .about h2 { font-size: 18px; }
+    .imggg { width: 40%; left: 0%; }
+    .ttext { left: 40%; bottom: 80%; width: 60%; font-size: 12px !important; }
+    .ttext .btn{font-size: 12px !important; width: 40% !important;}
+/* Book Table */
+.book{
+    margin: 5%;
+    width: 90%;
+}
+.ftext{
+    padding: 2% 10%;
+    text-align: center;
+}
+.form{
+    width: 80%;
+}
+.btn1 , .btn2{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* خريطة  */
+.map-wrapper{
+    width: 90%;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 4% auto;
+}
+iframe {
+    width: 100%;
+}
+    /* Clients */
+.ntext{
+    margin-top: 40%;
+    padding-top: 10px;
+    width: 100%;
+}
+.ntext h2{
+    text-align: center;
+    font-size: 18px;
+}
+.conp{
+    margin: 1%;
+    display: grid;
+            grid-template-columns: repeat(1,300px);
+            grid-template-rows: repeat(2,250px);
+            grid-template-areas: "con1 "
+                                 "con2";
+    gap: 20px;
+    justify-content: center;
+}
+.con{
+    padding: 5%;
+}
+.nimg img{
+    width: 50%;    
+}
+.nimg h6{
+    font-size: 12px !important;    
+}
+.nimg p{
+    font-size: 8px !important;
+}
+.nnte{
+    font-size: 10px !important;
+}
+.conp{
+        margin: 1%;
+        display: grid;
+                grid-template-columns: repeat(1,400px);
+                grid-template-rows: repeat(2,250px);
+                grid-template-areas: "con1 "
+                                     "con2";
+        gap: 5px;
+        align-items: center;
+
+    }
+.con { padding: 3%; }
+/* Footer */
+.contit{
+    width: 100%;
+}
+.cont{
+    margin: 1% 1%;
+    padding: 1% 0%;
+    font-size: 8px;
+    justify-content: space-around;
+}
+.contt h4{
+    padding: 1%;
+    font-size: 10px;       
+    font-size: 10px !important;
+}
+hr{
+    margin: 0 !important;
+}
+.copy{
+    font-size: 8px;
+    margin: 1%;
+}
+}
 /* 720px - Tablet */
-@media screen and (min-width: 720px) and (max-width: 1024px) {
+@media screen and (min-width: 721px) and (max-width: 799px) {
     .navbar { padding: 0 5% !important; }
     nav #logo { font-size: 20px; }
     nav #link { font-size: 13px; }
-    .header { height: 65vh; }
-    .text { width: 40%; top: -100%; padding: 5%; }
+    .header { height: 50vh; }
+    .text { width: 40%; top: -55%; padding: 2%; }
     .text h2 { font-size: 18px !important; }
     .text p { font-size: 10px; }
     .text .btn { width: 60% !important; font-size: 12px !important;}
-    .back { width: 100%; margin-top: 40%; gap: 20px; padding: 0 5%; }
+    .back { width: 100%; margin-top: 0%; gap: 20px; padding: 0 5%;}
     .order { width: 100%;}
     .oimgg { width: 90px; right: 20px; }
     .otext { right: 20px; font-size: 10px !important; }
     .of { font-size: 20px; }
-    .menu { margin-top: 12%; }
+    .menu { margin-top: 5%; }
     .mtex { font-size: 20px; margin: 5%; }
     .items { grid-template-columns: repeat(2, 340px);grid-template-rows: repeat(5, 500px); gap: 10px; margin: 4% 1%; grid-template-areas: "item1 item2" "item3 item4" "item5 item6" "item7 item8" "item9 item9"; }
     .item { margin: 0; min-height: 400px;}
@@ -828,7 +1211,246 @@ hr{
     .itext { font-size: 10px; }
     .about { height: 350px; margin-top: 10%; padding: 4%; }
     .about h2 { font-size: 16px; }
-    .imggg { width: 30%; left: 1%; }
+    .imggg { width: 25%; left: 1%; }
+    .ttext {top: -75%; left: 45%; width: 50%; font-size: 12px !important; }
+    .ttext .btn{font-size: 10px;}
+/* Book Table */
+.book{
+    margin: 5%;
+    width: 50% !important;
+}
+.form{
+    height: 50vh;
+}
+.ftext{
+    padding: 2% 10%;
+    text-align: center;
+    margin: 5%;
+}
+.form-control{
+    width: 50% ;
+}
+.btn1 , .btn2{
+    width: 40%;
+    font-size: 12px !important;
+}
+/* خريطة  */
+.map-wrapper{
+    width: 75%;
+    height: 45vh;
+    position: relative;
+    top: -62%;
+    left: 95%;
+}
+iframe {
+    width: 100%;
+}
+
+    /* Clients */
+.ntext{
+    display: block;
+    margin-top: -0%;
+    height: 40vh;
+}
+.ntext h2{
+    text-align: center;
+    font-size: 18px;
+}
+.conp{
+    margin: 1%;
+    display: grid;
+            grid-template-columns: repeat(1,350px);
+            grid-template-rows: repeat(2,250px);
+            grid-template-areas: "con1 con2";               
+    gap: 20px;
+    justify-content: center;
+}
+.con{
+    padding: 5%;
+}
+.nimg img{
+    width: 50%;
+    height: 80px;    
+}
+.nimg h6{
+    font-size: 12px !important;    
+}
+.nimg p{
+    font-size: 8px !important;
+}
+.nnte{
+    font-size: 10px !important;
+}
+/* Footer */
+.contit{
+    width: 100%;
+        height: 29vh;
+    margin-top: 5%;
+}
+.cont{
+    margin: 1% 1%;
+    padding: 1% 0%;
+    font-size: 8px;
+    justify-content: space-around;
+}
+.contt h4{
+    padding: 1%;
+    font-size: 10px;       
+    font-size: 10px !important;
+}
+hr{
+    margin: 0 !important;
+}
+.copyr{
+    font-size: 8px;
+    margin: 4%;
+}
+}
+
+/* 800px - Tablet */
+@media screen and (min-width: 800px) and (max-width: 879px) {
+    .navbar { padding: 0 5% !important; }
+    nav #logo { font-size: 20px; }
+    nav #link { font-size: 13px; }
+    .header { height: 50vh; }
+    .text { width: 40%; top: -55%; padding: 2%; }
+    .text h2 { font-size: 18px !important; }
+    .text p { font-size: 10px; }
+    .text .btn { width: 60% !important; font-size: 12px !important;}
+    .back { width: 100%; flex-direction: row;  margin-top: 0%; gap: 20px; padding: 0 5%;}
+    .order { width: 100%;}
+    .oimgg { width: 90px; right: 20px; }
+    .otext { right: 20px; font-size: 10px !important; }
+    .of { font-size: 20px; }
+    .menu { margin-top: 5%; }
+    .mtex { font-size: 20px; margin: 5%; }
+    .items { grid-template-columns: repeat(2, 340px);grid-template-rows: repeat(5, 500px); gap: 10px; margin: 4% 1%; grid-template-areas: "item1 item2" "item3 item4" "item5 item6" "item7 item8" "item9 item9"; }
+    .item { margin: 0; min-height: 400px;}
+    .item9 .iiimg { height: 50%; }
+    h5 { font-size: 17px !important; }
+    .itext { font-size: 10px; }
+    .about { height: 350px; margin-top: 10%; padding: 4%; }
+    .about h2 { font-size: 16px; }
+    .imggg { width: 25%; left: 1%; }
+    .ttext {top: -75%; left: 45%; width: 50%; font-size: 12px !important; }
+    .ttext .btn{font-size: 10px;}
+/* Book Table */
+.book{
+    margin: 5%;
+    width: 50% !important;
+}
+.form{
+    height: 50vh;
+}
+.ftext{
+    padding: 2% 10%;
+    text-align: center;
+    margin: 5%;
+}
+.form-control{
+    width: 50% ;
+}
+.btn1 , .btn2{
+    width: 40%;
+    font-size: 12px !important;
+}
+/* خريطة  */
+.map-wrapper{
+    width: 75%;
+    height: 45vh;
+    position: relative;
+    top: -62%;
+    left: 95%;
+}
+iframe {
+    width: 100%;
+}
+
+    /* Clients */
+.ntext{
+    display: block;
+    margin-top: -0%;
+    height: 40vh;
+}
+.ntext h2{
+    text-align: center;
+    font-size: 18px;
+}
+.conp{
+    margin: 1%;
+    display: grid;
+            grid-template-columns: repeat(1,350px);
+            grid-template-rows: repeat(2,250px);
+            grid-template-areas: "con1 con2";               
+    gap: 20px;
+    justify-content: center;
+}
+.con{
+    padding: 5%;
+}
+.nimg img{
+    width: 50%;
+    height: 80px;    
+}
+.nimg h6{
+    font-size: 12px !important;    
+}
+.nimg p{
+    font-size: 8px !important;
+}
+.nnte{
+    font-size: 10px !important;
+}
+/* Footer */
+.contit{
+    width: 100%;
+    margin-top: 5%;
+}
+.cont{
+    margin: 1% 1%;
+    padding: 1% 0%;
+    font-size: 8px;
+    justify-content: space-around;
+}
+.contt h4{
+    padding: 1%;
+    font-size: 10px;       
+    font-size: 10px !important;
+}
+hr{
+    margin: 0 !important;
+}
+.copyr{
+    font-size: 8px;
+    margin: 1%;
+}
+}
+
+/* 880 - 1024 */
+@media screen and (min-width: 880px) and (max-width: 1024px) {
+    .navbar { padding: 0 5% !important; }
+    nav #logo { font-size: 20px; }
+    nav #link { font-size: 13px; }
+    .header { height: 50vh; }
+    .text { width: 40%; top: -60%; padding: 5%; }
+    .text h2 { font-size: 18px !important; }
+    .text p { font-size: 10px; }
+    .text .btn { width: 60% !important; font-size: 12px !important;}
+    .back { width: 100%; flex-direction: row; margin-top: 0%; gap: 20px; padding: 0 5%; }
+    .order { width: 100%;}
+    .oimgg { width: 90px;}
+    .otext { right: 20px; font-size: 10px !important; }
+    .of { font-size: 20px; }
+    .mtex { font-size: 20px; margin: 5%; }
+    .items { grid-template-columns: repeat(2, 340px);grid-template-rows: repeat(5, 500px); gap: 10px; margin: 4% 1%; grid-template-areas: "item1 item2" "item3 item4" "item5 item6" "item7 item8" "item9 item9"; }
+    .item { margin: 0; min-height: 400px;}
+    .item9 .iiimg { height: 50%; }
+    .ii button {left:200% !important;}
+    h5 { font-size: 17px !important; }
+    .itext { font-size: 10px; }
+    .about { height: 350px; margin-top: 10%; padding: 4%; }
+    .about h2 { font-size: 16px; }
+    .imggg { width: 25%; left: 1%; }
     .ttext {top: -75%; left: 45%; width: 50%; font-size: 12px !important; }
     .ttext .btn{font-size: 10px;}
 /* Book Table */
@@ -930,7 +1552,7 @@ hr{
 }
 
 /* 1024px+ - Desktop */
-@media screen and (min-width: 1025px) and (max-width: 1180px) {
+ @media screen and (min-width: 1025px) and (max-width: 1180px) { 
     .navbar { padding: 0 5% !important; }
     nav #logo { font-size: 25px; }
     nav #link { font-size: 15px; }
@@ -939,7 +1561,7 @@ hr{
     .text h2 { font-size: 28px; }
     .text p { font-size: 16px; }
     .text .btn { width: 40%; }
-    .back { margin-top: 5%; }
+    .back { margin-top: 10%; }
     .order { width: 40%; }
     .oimgg { width: 100px; right: 10%; }
     .otext { right: 50px; font-size: 6px!important; }
@@ -961,6 +1583,6 @@ hr{
     .map-wrapper { width: 60%; left: 60%; top: -70%; }
     iframe { width: 70%; height: 300px; }
     .conp { justify-content: center; grid-template-columns: repeat(2, 490px); grid-template-rows: repeat(1, 300px); gap: 30px; }
-}
+} 
 
 
